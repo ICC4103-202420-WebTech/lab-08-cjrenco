@@ -1,0 +1,24 @@
+<h1>Training Session Details</h1>
+
+<table class="table">
+  <tr>
+    <th>Date:</th>
+    <td><%= @training_session.date %></td>
+  </tr>
+  <tr>
+    <th>Activity:</th>
+    <td><%= @training_session.activity %></td>
+  </tr>
+  <tr>
+    <th>Duration (minutes):</th>
+    <td><%= @training_session.duration %></td>
+  </tr>
+  <tr>
+    <th>Description:</th>
+    <td><%= @training_session.description %></td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_training_session_path(@training_session), class: 'btn btn-secondary' %>
+<%= link_to 'Back to Training Sessions', training_sessions_path, class: 'btn btn-secondary' %>
+<%= link_to 'Delete', training_session_path(@training_session), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
